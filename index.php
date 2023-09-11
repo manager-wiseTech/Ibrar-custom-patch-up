@@ -1,2 +1,2 @@
 <?php 
-// hello world
+// Silence is golden
