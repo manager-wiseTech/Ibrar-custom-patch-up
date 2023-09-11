@@ -7,6 +7,21 @@
 */
 
 
+require 'plugin-update-checker/plugin-update-checker.php';
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/manager-wiseTech/Ibrar-custom-patch-up.git',
+	__FILE__,
+	'Ibrar-custom-patch-up'
+);
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
+
+//Optional: If you're using a private repository, specify the access token like this:
+$myUpdateChecker->setAuthentication('your-token-here');
+
+
 // This is security check
 if(! defined ('ABSPATH')){
     die;
