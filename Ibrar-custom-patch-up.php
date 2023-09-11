@@ -5,7 +5,7 @@
  * Author:            Ibrar Ayub
  * Version:           1.0.0
 */
-
+// This is security check
 if(! defined ('ABSPATH')){
     die;
 }
