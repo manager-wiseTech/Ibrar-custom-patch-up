@@ -8,9 +8,9 @@
 
 require 'plugin-update-checker-master/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/manager-wiseTech/Ibrar-custom-patch-up.git',
-	__FILE__,
-	'Ibrar-custom-patch-up'
+    'https://github.com/manager-wiseTech/Ibrar-custom-patch-up/',
+    __FILE__,
+    'Ibrar-custom-patch-up'
 );
 
 //Set the branch that contains the stable release.
