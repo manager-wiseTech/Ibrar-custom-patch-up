@@ -1,9 +1,9 @@
 <?php
 /*
- * Plugin Name:       Ibrar's Custom Patch UPs
+ * Plugin Name:       Ibrar Custom Patch UP
  * Description:       This plugin is used to exclude specific category posts from home page.
  * Author:            Ibrar Ayub
- * Version:           1.0
+ * Version:           1.0.0
 */
 
 require 'plugin-update-checker-master/plugin-update-checker.php';
