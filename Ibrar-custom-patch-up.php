@@ -74,6 +74,20 @@ add_action('admin_init', 'custom_patch_ups_exclude_posts_register_settings');
 // Code to exclude the specific category posts from the home page
 function custom_patch_ups_exclude_posts_by_category_from_homepage($query)
 {
+        if ($query->is_home() && $query->is_main_query()) {
+            $selected_categories = get_option('custom_patch_ups_categories');
+            if ($selected_categories && is_array($selected_categories) && count($selected_categories) > 0) {
+                $query->set('category__not_in', $selected_categories);
+            }
+        }
+}
+
+add_action('pre_get_posts', 'custom_patch_ups_exclude_posts_by_category_from_homepage');
+
+
+/*
+function custom_patch_ups_exclude_posts_by_category_from_homepage($query)
+{
     $theme = wp_get_theme();
     if ('Astra' == $theme->name || 'Astra' == $theme->parent_theme) {
         if ($query->is_home() && $query->is_main_query()) {
@@ -84,4 +98,4 @@ function custom_patch_ups_exclude_posts_by_category_from_homepage($query)
         }
     }
 }
-add_action('pre_get_posts_custom_exclude', 'custom_patch_ups_exclude_posts_by_category_from_homepage');
+add_action('pre_get_posts_custom_exclude', 'custom_patch_ups_exclude_posts_by_category_from_homepage');*/
